@@ -29,6 +29,12 @@ npm install
 npm run client for React
 npm run server for Express
 npm run dev for both 
+
+# Issues
+After any change in App.js
+a refresh is needed for a change to be shown even if a
+refresh was initially shown. Just refresh again after
+making a change
 ----
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
