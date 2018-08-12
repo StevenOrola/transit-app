@@ -1,3 +1,36 @@
+## transit-app
+
+Assumes GTFS files are in another folder separate from the app folder
+
+root (which has two folders, google_transit and transit-app)
+-google_transit
+--script.sql
+--stop_times.txt
+--stops.txt
+--and so on
+
+-transit-app
+--client
+--node_modules
+--and so on
+
+txt files are from https://developer.translink.ca/servicesgtfs/gtfsdata
+
+in CLI and while in root folder,  type the following 
+sqlite3 gtfs.sqlite < transit-app/script.sql
+This will create a file, gtfs.sqlite, in the root folder. The root folder now has 3 things in it: gtfs.sqlite, google_transit, and transit-app
+
+# Dependencies
+npm install
+cd ./client
+npm install
+
+# Running the app
+npm run client for React
+npm run server for Express
+npm run dev for both 
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

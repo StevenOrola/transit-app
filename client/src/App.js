@@ -3,15 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-	state = {
-		response: '',
-		msg: ''
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			response: [],
+			msg: ''
+		};
+	}
 	
 	componentDidMount() {
 		this.callApi()
+			//.then(response => this.setState({response: response.express}));
 			.then(res => this.setState({ response: JSON.stringify(res.express), msg: res.msg }))
-			.catch(err => console.log(err));
+			//.catch(err => console.log(err));
 	}
 	
 	callApi = async () => {
@@ -25,7 +29,8 @@ class App extends Component {
 	};
 	
   render() {
-    return (
+
+	return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -37,7 +42,8 @@ class App extends Component {
 		</p>
       </div>
     );
-  }
+	}
+  
 }
 
 export default App;
