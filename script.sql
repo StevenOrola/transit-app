@@ -1,4 +1,4 @@
-create table stops(stop_id TEXT PRIMARY KEY,stop_code TEXT,stop_name TEXT,
+create table stops(stop_id TEXT,stop_code TEXT,stop_name TEXT,
                    stop_desc TEXT,stop_lat REAL,stop_lon REAL,
                    zone_id NUMERIC,stop_url TEXT, location_type TEXT, parent_station TEXT);
 create table stop_times(trip_id TEXT,arrival_time TEXT,departure_time TEXT,
