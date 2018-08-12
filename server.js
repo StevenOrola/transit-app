@@ -39,7 +39,7 @@ var stops = sequelize.query(sqlQuery, {
  }).spread((results, metadata) => {
 	stopsA.push(results);
 	stopsB = stopsA[0];
-	stopsC = stopsB[0];
+	stopsC = stopsB[1];
  });
  
  
@@ -49,7 +49,7 @@ var stops = sequelize.query(sqlQuery, {
 //console.log(StopTimes);
 
 app.get('/api/hello', (req, res) => {
-  res.send({ express: stopsC, msg: 'hi' });
+  res.send({ express: stopsB, msg: 'hi' });
   //res.send({express: JSON.stringify(stopsC), msg: 'hi'})
   //res.send(JSON.stringify(stopsC));
   });
